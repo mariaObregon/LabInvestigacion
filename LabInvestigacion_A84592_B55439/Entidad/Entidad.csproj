@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0260FA63-05DA-4C19-BA31-1E1B5592DA0B}</ProjectGuid>
+    <ProjectGuid>{1E429E0F-0A90-4317-8713-F21593A96031}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Datos</RootNamespace>
-    <AssemblyName>Datos</AssemblyName>
+    <RootNamespace>Entidad</RootNamespace>
+    <AssemblyName>Entidad</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,18 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,44 +40,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModeloDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloDB.Context.tt</DependentUpon>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Cliente.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloDB.Designer.cs">
+    <Compile Include="Factura.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoFacturacion.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LineaDetalle.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloDB.edmx</DependentUpon>
+      <DependentUpon>ModeloDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModeloDB.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="ModeloDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModeloDB.edmx.diagram">
-      <DependentUpon>ModeloDB.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ModeloDB.Context.tt">
+    <Content Include="ModeloDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModeloDB.Context.cs</LastGenOutput>
-      <CustomToolNamespace>Entidad</CustomToolNamespace>
+      <LastGenOutput>ModeloDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entidad\Entidad.csproj">
-      <Project>{1e429e0f-0a90-4317-8713-f21593a96031}</Project>
-      <Name>Entidad</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

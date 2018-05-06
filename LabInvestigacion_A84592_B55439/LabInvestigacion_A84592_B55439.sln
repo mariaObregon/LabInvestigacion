@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfazGrafica", "InterfazGrafica\InterfazGrafica.csproj", "{222A8D56-20D7-410C-BE72-92F6DE93E987}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{1E429E0F-0A90-4317-8713-F21593A96031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{222A8D56-20D7-410C-BE72-92F6DE93E987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{222A8D56-20D7-410C-BE72-92F6DE93E987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{222A8D56-20D7-410C-BE72-92F6DE93E987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E429E0F-0A90-4317-8713-F21593A96031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E429E0F-0A90-4317-8713-F21593A96031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E429E0F-0A90-4317-8713-F21593A96031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E429E0F-0A90-4317-8713-F21593A96031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
