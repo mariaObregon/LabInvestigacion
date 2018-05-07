@@ -10,7 +10,6 @@ namespace Datos
     public class Consultar
     {
         /*Saca a los clientes de la base de datos*/
-        //public List<Cliente> GetClientes() {
         public List<Cliente> GetClientes(String cedula) { 
         using (ModeloDB db = new ModeloDB())
             {
@@ -19,7 +18,6 @@ namespace Datos
                               select c;
                 
                 return cliente.ToList();
-               // return db.Cliente.ToList();
             }
         }
 
