@@ -7,27 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Negocio;
+using Entidad;
 namespace InterfazGrafica
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
 
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
-            frm2.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 frm3 = new Form3();
-            frm3.Show();
+            textBox1.Text = RecibirDatos.mostrarCliente(textBox2.Text);
         }
     }
 }
