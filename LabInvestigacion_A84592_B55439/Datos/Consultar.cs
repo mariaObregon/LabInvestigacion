@@ -22,5 +22,24 @@ namespace Datos
                // return db.Cliente.ToList();
             }
         }
+
+        /*Ingresa un cliente a la base de datos*/
+        
+        public void insertarCliente(String cedula, String nombre, 
+                                    String apellido, String correo, 
+                                    String telefono)
+        {
+            using (ModeloDB db = new ModeloDB())
+            {
+                Cliente nuevoCliente = new Cliente
+                {
+                  Cedula = cedula, Nombre = nombre, Apellido = apellido,
+                  Correo = correo, Telefono = telefono
+                };
+                db.Cliente.Add(nuevoCliente);
+                db.SaveChanges();
+            }
+        }
+
     }
 }

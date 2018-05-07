@@ -25,7 +25,7 @@ namespace InterfazGrafica
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = RecibirDatos.mostrarCliente(textBox2.Text);
+            textBox1.Text = RecibirDatosUsuario.mostrarCliente(textBox2.Text);
         }
     }
 }

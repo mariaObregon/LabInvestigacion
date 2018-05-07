@@ -14,6 +14,7 @@ namespace Entidad
     
     public partial class Cliente
     {
+       
         public Cliente()
         {
             this.HistoricoFacturacion = new HashSet<HistoricoFacturacion>();

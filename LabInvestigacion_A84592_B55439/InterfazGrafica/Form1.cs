@@ -29,5 +29,16 @@ namespace InterfazGrafica
             Form3 frm3 = new Form3();
             frm3.Show();
         }
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+            FormDatosUsuario datosUsuario = new FormDatosUsuario();
+            datosUsuario.Show();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

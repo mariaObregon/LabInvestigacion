@@ -8,9 +8,18 @@ using Datos;
 
 namespace Negocio
 {
-    public class RecibirDatos
+    public class RecibirDatosUsuario
     {
-        public static String mostrarCliente(String cedula) {
+        Consultar consultar = new Consultar();
+
+        public void insertarCliente(String cedula, String nombre,
+                                           String apellido, String correo,
+                                           String telefono)
+        {
+            consultar.insertarCliente(cedula, nombre, apellido, correo, telefono);
+        }
+
+        public static String mostrarCliente(String cedula) { //porque estatico?
             Consultar cons = new Consultar();
             String datos = null;
             List<Cliente> lista = cons.GetClientes(cedula);
