@@ -20,10 +20,7 @@ namespace InterfazGrafica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Cliente> lista = RecibirDatos.GetClientes();
-            foreach (var item in lista)
-                textBox1.Text  += "Cedula: " + item.Cedula + String.Format(Environment.NewLine) + "Nombre: " + item.Nombre + String.Format(Environment.NewLine) + "Apellido: " + item.Apellido + String.Format(Environment.NewLine) +
-                    "Correo: " + item.Correo + String.Format(Environment.NewLine) + "Telefono: " + item.Telefono+ String.Format(Environment.NewLine) + String.Format(Environment.NewLine);
+           textBox1.Text = RecibirDatos.mostrarCliente(textBox2.Text);
         }
     }
 }
