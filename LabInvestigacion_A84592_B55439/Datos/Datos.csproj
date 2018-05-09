@@ -50,7 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultar.cs" />
+    <Compile Include="BaseProductos.cs" />
+    <Compile Include="BaseClientes.cs" />
     <Compile Include="ModeloDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

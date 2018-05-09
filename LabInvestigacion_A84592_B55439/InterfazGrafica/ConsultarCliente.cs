@@ -11,9 +11,9 @@ using Negocio;
 using Entidad;
 namespace InterfazGrafica
 {
-    public partial class Form2 : Form
+    public partial class ConsultarCliente : Form
     {
-        public Form2()
+        public ConsultarCliente()
         {
             InitializeComponent();
         }
@@ -25,7 +25,8 @@ namespace InterfazGrafica
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = RecibirDatosUsuario.mostrarCliente(textBox2.Text);
+            MantenimientoClientes mantenimiento = new MantenimientoClientes();
+            textBox1.Text = mantenimiento.mostrarCliente();
         }
     }
 }

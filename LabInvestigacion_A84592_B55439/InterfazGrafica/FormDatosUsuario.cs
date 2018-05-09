@@ -13,10 +13,10 @@ namespace InterfazGrafica
 {
     public partial class FormDatosUsuario : Form
     {
-        RecibirDatosUsuario recibirDatosU;
+        MantenimientoClientes mantenimiento;
         public FormDatosUsuario()
         {
-            recibirDatosU = new RecibirDatosUsuario();
+            mantenimiento = new MantenimientoClientes();
             InitializeComponent();
         }
 
@@ -28,7 +28,7 @@ namespace InterfazGrafica
             String strCorreo = tbCorreo.Text;
             String strTelefono = tbTelefono.Text;
 
-            recibirDatosU.insertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
+            mantenimiento.insertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
             this.Close();
         }
 

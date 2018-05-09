@@ -124,7 +124,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(31, 267);
+            this.btnInsertar.Location = new System.Drawing.Point(56, 260);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
             this.btnInsertar.TabIndex = 10;
@@ -134,7 +134,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(122, 267);
+            this.btnCancelar.Location = new System.Drawing.Point(147, 260);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 11;
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(280, 347);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.tbTelefono);

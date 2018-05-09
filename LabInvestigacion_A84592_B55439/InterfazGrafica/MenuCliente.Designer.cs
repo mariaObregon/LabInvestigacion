@@ -1,6 +1,6 @@
 ﻿namespace InterfazGrafica
 {
-    partial class Form1
+    partial class MenuCliente
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,7 +37,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(53, 201);
+            this.button2.Location = new System.Drawing.Point(203, 65);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 37);
             this.button2.TabIndex = 4;
@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 146);
+            this.button1.Location = new System.Drawing.Point(53, 126);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 37);
             this.button1.TabIndex = 5;
@@ -57,7 +57,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(53, 260);
+            this.btnEliminar.Location = new System.Drawing.Point(203, 126);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(109, 37);
             this.btnEliminar.TabIndex = 6;
@@ -67,7 +67,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(53, 84);
+            this.btnIngresar.Location = new System.Drawing.Point(53, 65);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(109, 37);
             this.btnIngresar.TabIndex = 7;
@@ -77,11 +77,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(440, 133);
+            this.button3.Location = new System.Drawing.Point(128, 203);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 49);
+            this.button3.Size = new System.Drawing.Size(109, 37);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Salir";
+            this.button3.Text = "Volver";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(380, 295);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnEliminar);
