@@ -20,25 +20,28 @@ namespace InterfazGrafica
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            ConsultarCliente frm2 = new ConsultarCliente();
-            frm2.Show();
+            FormConsultarCliente frm2 = new FormConsultarCliente();
+            frm2.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ModificarCliente frm3 = new ModificarCliente();
-            frm3.Show();
+            FormDatosUsuario datosUsuario = new FormDatosUsuario();
+            datosUsuario.GetButtonModificar().Visible = true;
+            datosUsuario.ShowDialog();
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
             FormDatosUsuario datosUsuario = new FormDatosUsuario();
-            datosUsuario.Show();
+            datosUsuario.GetButtonInsertar().Visible = true;
+            datosUsuario.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            FormEliminarCliente eliminarCliente = new FormEliminarCliente();
+            eliminarCliente.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

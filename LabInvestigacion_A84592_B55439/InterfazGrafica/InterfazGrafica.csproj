@@ -52,51 +52,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfazCliente\FormEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazCliente\FormEliminarCliente.Designer.cs">
+      <DependentUpon>FormEliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuCliente.cs">
+    <Compile Include="InterfazCliente\MenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuCliente.Designer.cs">
+    <Compile Include="InterfazCliente\MenuCliente.Designer.cs">
       <DependentUpon>MenuCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarCliente.cs">
+    <Compile Include="InterfazCliente\FormConsultarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarCliente.Designer.cs">
-      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    <Compile Include="InterfazCliente\FormConsultarCliente.Designer.cs">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarCliente.cs">
+    <Compile Include="InterfazCliente\FormDatosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModificarCliente.Designer.cs">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDatosUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDatosUsuario.Designer.cs">
+    <Compile Include="InterfazCliente\FormDatosUsuario.Designer.cs">
       <DependentUpon>FormDatosUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InterfazCliente\FormEliminarCliente.resx">
+      <DependentUpon>FormEliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuCliente.resx">
+    <EmbeddedResource Include="InterfazCliente\MenuCliente.resx">
       <DependentUpon>MenuCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultarCliente.resx">
-      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazCliente\FormConsultarCliente.resx">
+      <DependentUpon>FormConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCliente.resx">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDatosUsuario.resx">
+    <EmbeddedResource Include="InterfazCliente\FormDatosUsuario.resx">
       <DependentUpon>FormDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -131,6 +131,10 @@
       <Project>{e5f1c9c8-553c-4a37-9375-581f2eda8300}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InterfazFactura\" />
+    <Folder Include="InterfazProducto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

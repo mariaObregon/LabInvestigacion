@@ -47,9 +47,6 @@
     <Compile Include="Factura.cs">
       <DependentUpon>ModeloDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="HistoricoFacturacion.cs">
-      <DependentUpon>ModeloDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="LineaDetalle.cs">
       <DependentUpon>ModeloDB.tt</DependentUpon>
     </Compile>
@@ -67,13 +64,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModeloDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModeloDB.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

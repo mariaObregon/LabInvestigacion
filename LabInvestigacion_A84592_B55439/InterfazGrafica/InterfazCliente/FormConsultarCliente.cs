@@ -11,9 +11,9 @@ using Negocio;
 using Entidad;
 namespace InterfazGrafica
 {
-    public partial class ConsultarCliente : Form
+    public partial class FormConsultarCliente : Form
     {
-        public ConsultarCliente()
+        public FormConsultarCliente()
         {
             InitializeComponent();
         }

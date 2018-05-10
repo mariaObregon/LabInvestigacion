@@ -11,24 +11,20 @@ using System.Windows.Forms;
 
 namespace InterfazGrafica
 {
-    public partial class FormDatosUsuario : Form
+    public partial class FormEliminarCliente : Form
     {
         MantenimientoClientes mantenimiento;
-        public FormDatosUsuario()
+
+        public FormEliminarCliente()
         {
             mantenimiento = new MantenimientoClientes();
             InitializeComponent();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            String strNombre = tbNombre.Text;
-            String strCedula = tbCedula.Text;
-            String strApellido = tbApellido.Text;
-            String strCorreo = tbCorreo.Text;
-            String strTelefono = tbTelefono.Text;
 
-            mantenimiento.insertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
+            mantenimiento.eliminarCliente(tbCedula.Text);
             this.Close();
         }
 

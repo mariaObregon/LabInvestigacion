@@ -20,6 +20,10 @@ namespace Negocio
             consultar.insertarCliente(cedula, nombre, apellido, correo, telefono);
         }
 
+        public void eliminarCliente(String cedula) {
+            consultar.eliminarCliente(cedula);
+        }
+
         public String mostrarCliente() {
             
             String datos = null;

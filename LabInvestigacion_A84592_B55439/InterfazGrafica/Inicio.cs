@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace InterfazGrafica
 {
-    public partial class Inicio : Form
+    public partial class FormInicio : Form
     {
-        public Inicio()
+        public FormInicio()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuCliente frm1 = new MenuCliente();
-            frm1.Show();
+            MenuCliente frmMenuCliente = new MenuCliente();
+            frmMenuCliente.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
