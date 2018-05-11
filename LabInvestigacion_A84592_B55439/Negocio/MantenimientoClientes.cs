@@ -24,10 +24,10 @@ namespace Negocio
             consultar.eliminarCliente(cedula);
         }
 
-        public String mostrarCliente() {
+        public String mostrarCliente(String cedula) {
             
             String datos = null;
-            List<Cliente> lista = consultar.GetClientes();
+            List<Cliente> lista = consultar.GetClientes(cedula);
             foreach (var item in lista)
                 datos += "Cedula: " + item.Cedula + String.Format(Environment.NewLine) + "Nombre: " + item.Nombre + String.Format(Environment.NewLine) + "Apellido: " + item.Apellido + String.Format(Environment.NewLine) +
                     "Correo: " + item.Correo + String.Format(Environment.NewLine) + "Telefono: " + item.Telefono + String.Format(Environment.NewLine) + String.Format(Environment.NewLine);
@@ -55,7 +55,7 @@ namespace Negocio
             {
                 MessageBox.Show("Telefono vacio", "Error");
             }
-                MessageBox.Show(consultar.modificarCliente(cedula, nombre, apellido, correo, telefono), "Avisp"); ;
+                MessageBox.Show(consultar.modificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
             
         }
     }

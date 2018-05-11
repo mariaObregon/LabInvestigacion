@@ -10,11 +10,12 @@ namespace Datos
     public class BaseClientes
     {
         /*Saca a los clientes de la base de datos*/
-        public List<Cliente> GetClientes()
+        public List<Cliente> GetClientes(String cedula)
         {
             using (ModeloDB db = new ModeloDB())
             {
                 var cliente = from c in db.Cliente
+                              where c.Cedula.Equals(cedula)
                               select c;
 
                 return cliente.ToList();
@@ -47,11 +48,9 @@ namespace Datos
             using (ModeloDB db = new ModeloDB())
             {
 
-                var cliente = from c in db.Cliente
-                              where c.Cedula == cedula
-                              select c;
+                var cliente = GetClientes(cedula);
 
-                if (cliente != null)
+                if (cliente.Any<Cliente>())
                 {
                     foreach (var c in cliente)
                     {

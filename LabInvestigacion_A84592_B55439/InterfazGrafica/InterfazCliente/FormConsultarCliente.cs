@@ -26,7 +26,9 @@ namespace InterfazGrafica
         private void button2_Click(object sender, EventArgs e)
         {
             MantenimientoClientes mantenimiento = new MantenimientoClientes();
-            textBox1.Text = mantenimiento.mostrarCliente();
+            textBox1.Text = mantenimiento.mostrarCliente(textBox2.Text);
         }
+
+
     }
 }
