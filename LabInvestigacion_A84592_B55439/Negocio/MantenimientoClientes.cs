@@ -21,6 +21,7 @@ namespace Negocio
         }
 
         public void eliminarCliente(String cedula) {
+
             consultar.eliminarCliente(cedula);
         }
 
@@ -34,6 +35,8 @@ namespace Negocio
 
             return datos;
         }
+
+        
 
         public void actualizarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
         {
@@ -57,6 +60,11 @@ namespace Negocio
             }
                 MessageBox.Show(consultar.modificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
             
+        }
+
+        public List<Cliente> getList(String cedula)
+        {
+            return consultar.GetClientes(cedula);
         }
     }
        

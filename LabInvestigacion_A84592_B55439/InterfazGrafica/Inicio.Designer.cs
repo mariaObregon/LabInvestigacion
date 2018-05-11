@@ -104,6 +104,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "FormInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form0";
             this.ResumeLayout(false);
             this.PerformLayout();

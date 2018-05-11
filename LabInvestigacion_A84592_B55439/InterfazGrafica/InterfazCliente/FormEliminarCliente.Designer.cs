@@ -33,21 +33,23 @@
             this.lbCedula = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tbCedula
             // 
-            this.tbCedula.Location = new System.Drawing.Point(45, 90);
+            this.tbCedula.Location = new System.Drawing.Point(45, 85);
             this.tbCedula.Name = "tbCedula";
             this.tbCedula.Size = new System.Drawing.Size(100, 20);
             this.tbCedula.TabIndex = 0;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(45, 138);
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(45, 122);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(139, 23);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -70,30 +72,42 @@
             this.dataGridView.Location = new System.Drawing.Point(212, 59);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView.Size = new System.Drawing.Size(441, 143);
             this.dataGridView.TabIndex = 3;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(45, 179);
+            this.btnCancelar.Location = new System.Drawing.Point(45, 160);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(139, 23);
             this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Volver";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(151, 82);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(33, 23);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.Text = "b";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormEliminarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 269);
+            this.ClientSize = new System.Drawing.Size(679, 259);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.lbCedula);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.tbCedula);
             this.Name = "FormEliminarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -108,5 +122,6 @@
         private System.Windows.Forms.Label lbCedula;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

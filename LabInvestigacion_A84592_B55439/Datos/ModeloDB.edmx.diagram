@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="LaboratorioInvestigacionModel.LineaDetalle" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="LaboratorioInvestigacionModel.Producto" Width="1.5" PointX="4" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LaboratorioInvestigacionModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="LaboratorioInvestigacionModel.FK_Factura_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="LaboratorioInvestigacionModel.FK_Factura_Cliente" ManuallyRouted="false" ></AssociationConnector>
         <AssociationConnector Association="LaboratorioInvestigacionModel.FK_LineaDetalle_Factura" ManuallyRouted="false" />
         <AssociationConnector Association="LaboratorioInvestigacionModel.FK_LineaDetalle_Producto" ManuallyRouted="false" />
       </Diagram>

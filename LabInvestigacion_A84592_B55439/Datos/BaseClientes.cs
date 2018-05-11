@@ -110,9 +110,6 @@ namespace Datos
                     db.Cliente.Remove(clienteAux);
                     Console.WriteLine("elimina cliente");
                     db.SaveChanges();
-
-
-
                 }
             }
         }
