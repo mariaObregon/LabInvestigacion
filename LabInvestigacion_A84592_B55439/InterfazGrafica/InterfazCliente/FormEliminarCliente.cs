@@ -1,42 +1,36 @@
 ﻿using Entidad;
 using Negocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfazGrafica
 {
     public partial class FormEliminarCliente : Form
     {
-        MantenimientoClientes mantenimiento;
-        private String strID;
+        private MantenimientoClientes mantenimiento;
+        private String strCedula;
 
         public FormEliminarCliente()
         {
             mantenimiento = new MantenimientoClientes();
             InitializeComponent();
+          
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult opcion = MessageBox.Show($"¿Desea eliminar al cliente con ID: {strID} ?", "Confirmar", MessageBoxButtons.YesNo);
+            
+            DialogResult opcion = MessageBox.Show($"¿Desea eliminar al cliente con ID: {strCedula} ?", "Confirmar", MessageBoxButtons.YesNo);
 
             if (opcion == DialogResult.Yes)
             {
-                mantenimiento.eliminarCliente(tbCedula.Text);
+                mantenimiento.eliminarCliente(strCedula);
                 MessageBox.Show("El cliente ha sido eliminado", "Mensaje");
                 tbCedula.Clear();
                 btnEliminar.Enabled = false;
-                dataGridView.DataSource = mantenimiento.getList("");
-                dataGridView.Columns.RemoveAt(5);
+                FillDataGrid(strCedula);
             }
-   
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -46,16 +40,29 @@ namespace InterfazGrafica
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           dataGridView.DataSource = mantenimiento.getList(tbCedula.Text);
-            dataGridView.Columns.RemoveAt(5);
-            if (mantenimiento.getList(tbCedula.Text).Any<Cliente>())
+            strCedula = tbCedula.Text;
+            FillDataGrid(strCedula);
+
+            if (mantenimiento.ListaVacia(strCedula))
             {
                 btnEliminar.Enabled = true;
-                strID = mantenimiento.getList(tbCedula.Text).ElementAt<Cliente>(0).Cedula;
+                
             }
-            else {
+            else
+            {
                 MessageBox.Show("El cliente ingresado no existe", "Mensaje");
             }
+        }
+
+        private void FillDataGrid(String strCedula)
+        {
+            dataGridView.DataSource = mantenimiento.GetClientes(strCedula);
+            dataGridView.Columns.RemoveAt(5);
+        }
+
+        private void getCedula()
+        {
+            strCedula = tbCedula.Text;
         }
     }
 }

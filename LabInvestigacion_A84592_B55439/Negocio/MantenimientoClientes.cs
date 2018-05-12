@@ -62,9 +62,13 @@ namespace Negocio
             
         }
 
-        public List<Cliente> getList(String cedula)
+        public Boolean ListaVacia(String cedula)
         {
-            return consultar.GetClientes(cedula);
+            return consultar.GetClientes(cedula).Any<Cliente>();
+        }
+
+        public List<Cliente> GetClientes(string strCedula) {
+            return consultar.GetClientes(strCedula);
         }
     }
        
