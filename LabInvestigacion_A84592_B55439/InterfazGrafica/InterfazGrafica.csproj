@@ -94,6 +94,12 @@
     <Compile Include="InterfazFactura\FormNuevaFactura.Designer.cs">
       <DependentUpon>FormNuevaFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazProducto\FormConsultarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProducto\FormConsultarProducto.Designer.cs">
+      <DependentUpon>FormConsultarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazProducto\FormDatosProducto.cs">
       <SubType>Form</SubType>
     </Compile>
