@@ -13,19 +13,19 @@ namespace Negocio
     {
         BaseClientes consultar = new BaseClientes();
 
-        public void insertarCliente(String cedula, String nombre,
+        public void InsertarCliente(String cedula, String nombre,
                                            String apellido, String correo,
                                            String telefono)
         {
-            consultar.insertarCliente(cedula, nombre, apellido, correo, telefono);
+            consultar.InsertarCliente(cedula, nombre, apellido, correo, telefono);
         }
 
-        public void eliminarCliente(String cedula) {
+        public void EliminarCliente(String cedula) {
 
-            consultar.eliminarCliente(cedula);
+            consultar.EliminarCliente(cedula);
         }
 
-        public String mostrarCliente(String cedula) {
+        public String MostrarCliente(String cedula) {
             
             String datos = null;
             List<Cliente> lista = consultar.GetClientes(cedula);
@@ -38,7 +38,7 @@ namespace Negocio
 
         
 
-        public void actualizarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
+        public void ActualizarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
         {
             if (cedula.Trim() == "" || cedula == null) {
                 MessageBox.Show("Cedula vacia", "Error");
@@ -58,7 +58,7 @@ namespace Negocio
             {
                 MessageBox.Show("Telefono vacio", "Error");
             }
-                MessageBox.Show(consultar.modificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
+                MessageBox.Show(consultar.ModificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
             
         }
 

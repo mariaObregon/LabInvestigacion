@@ -58,17 +58,17 @@
     <Compile Include="InterfazCliente\FormEliminarCliente.Designer.cs">
       <DependentUpon>FormEliminarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazCliente\MenuCliente.cs">
+    <Compile Include="InterfazCliente\FormMenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfazCliente\MenuCliente.Designer.cs">
-      <DependentUpon>MenuCliente.cs</DependentUpon>
+    <Compile Include="InterfazCliente\FormMenuCliente.Designer.cs">
+      <DependentUpon>FormMenuCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfazCliente\FormConsultarCliente.cs">
       <SubType>Form</SubType>
@@ -82,16 +82,46 @@
     <Compile Include="InterfazCliente\FormDatosUsuario.Designer.cs">
       <DependentUpon>FormDatosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazFactura\FormFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazFactura\FormFacturacion.Designer.cs">
+      <DependentUpon>FormFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazFactura\FormNuevaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazFactura\FormNuevaFactura.Designer.cs">
+      <DependentUpon>FormNuevaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazProducto\FormDatosProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProducto\FormDatosProducto.Designer.cs">
+      <DependentUpon>FormDatosProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazProducto\FormEliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProducto\FormEliminarProducto.Designer.cs">
+      <DependentUpon>FormEliminarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazProducto\FormMenuProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazProducto\FormMenuProducto.Designer.cs">
+      <DependentUpon>FormMenuProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InterfazCliente\FormEliminarCliente.resx">
       <DependentUpon>FormEliminarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfazCliente\MenuCliente.resx">
-      <DependentUpon>MenuCliente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazCliente\FormMenuCliente.resx">
+      <DependentUpon>FormMenuCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazCliente\FormConsultarCliente.resx">
       <DependentUpon>FormConsultarCliente.cs</DependentUpon>
@@ -132,9 +162,6 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InterfazFactura\" />
-    <Folder Include="InterfazProducto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

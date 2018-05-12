@@ -28,7 +28,7 @@ namespace InterfazGrafica
             String strCorreo = tbCorreo.Text;
             String strTelefono = tbTelefono.Text;
 
-            mantenimiento.insertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
+            mantenimiento.InsertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
             this.Close();
         }
 
@@ -40,7 +40,7 @@ namespace InterfazGrafica
         private void btnModificar_Click(object sender, EventArgs e)
         {
             MantenimientoClientes clientes = new MantenimientoClientes();
-            clientes.actualizarCliente(tbCedula.Text, tbNombre.Text, tbApellido.Text, tbCorreo.Text, tbTelefono.Text);
+            clientes.ActualizarCliente(tbCedula.Text, tbNombre.Text, tbApellido.Text, tbCorreo.Text, tbTelefono.Text);
         }
 
         public Button GetButtonModificar() {

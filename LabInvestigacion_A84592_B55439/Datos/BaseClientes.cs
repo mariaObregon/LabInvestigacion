@@ -24,7 +24,7 @@ namespace Datos
 
         /*Ingresa un cliente a la base de datos*/
 
-        public void insertarCliente(String cedula, String nombre,
+        public void InsertarCliente(String cedula, String nombre,
                                     String apellido, String correo,
                                     String telefono)
         {
@@ -43,7 +43,7 @@ namespace Datos
             }
         }
 
-        public String modificarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
+        public String ModificarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
         {
             using (ModeloDB db = new ModeloDB())
             {
@@ -71,7 +71,7 @@ namespace Datos
             }
         }
 
-        public void eliminarCliente(String cedula)
+        public void EliminarCliente(String cedula)
         {
             using (ModeloDB db = new ModeloDB())
             {
@@ -112,7 +112,7 @@ namespace Datos
                     db.SaveChanges();
                 }
             }
-        }
+        }   
     }
 }
 

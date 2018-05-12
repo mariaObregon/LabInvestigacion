@@ -1,7 +1,5 @@
-﻿using Entidad;
-using Negocio;
+﻿using Negocio;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace InterfazGrafica
@@ -15,17 +13,17 @@ namespace InterfazGrafica
         {
             mantenimiento = new MantenimientoClientes();
             InitializeComponent();
-          
+
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            
+
             DialogResult opcion = MessageBox.Show($"¿Desea eliminar al cliente con ID: {strCedula} ?", "Confirmar", MessageBoxButtons.YesNo);
 
             if (opcion == DialogResult.Yes)
             {
-                mantenimiento.eliminarCliente(strCedula);
+                mantenimiento.EliminarCliente(strCedula);
                 MessageBox.Show("El cliente ha sido eliminado", "Mensaje");
                 tbCedula.Clear();
                 btnEliminar.Enabled = false;
@@ -33,12 +31,12 @@ namespace InterfazGrafica
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void BtnBuscar_Click(object sender, EventArgs e)
         {
             strCedula = tbCedula.Text;
             FillDataGrid(strCedula);
@@ -46,7 +44,6 @@ namespace InterfazGrafica
             if (mantenimiento.ListaVacia(strCedula))
             {
                 btnEliminar.Enabled = true;
-                
             }
             else
             {
