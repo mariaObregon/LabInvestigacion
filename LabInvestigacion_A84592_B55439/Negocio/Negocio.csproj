@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Excepciones.cs" />
+    <Compile Include="MantenimientoFactura.cs" />
     <Compile Include="MantenimientoProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MantenimientoClientes.cs" />

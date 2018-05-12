@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseFactura.cs" />
     <Compile Include="BaseProductos.cs" />
     <Compile Include="BaseClientes.cs" />
     <Compile Include="ModeloDB.Context.cs">
