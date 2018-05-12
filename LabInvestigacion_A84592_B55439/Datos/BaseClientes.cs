@@ -48,7 +48,9 @@ namespace Datos
             using (ModeloDB db = new ModeloDB())
             {
 
-                var cliente = GetClientes(cedula);
+                var cliente = from c in db.Cliente
+                              where c.Cedula.Equals(cedula)
+                              select c;
 
                 if (cliente.Any<Cliente>())
                 {
