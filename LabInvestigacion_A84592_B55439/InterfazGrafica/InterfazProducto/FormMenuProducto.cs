@@ -16,5 +16,33 @@ namespace InterfazGrafica.InterfazProducto
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            FormConsultarProducto frm = new FormConsultarProducto();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormDatosProducto frm = new FormDatosProducto();
+            frm.Show();
+        }
     }
 }

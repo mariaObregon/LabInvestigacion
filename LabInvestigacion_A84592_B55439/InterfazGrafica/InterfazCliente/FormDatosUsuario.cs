@@ -26,7 +26,7 @@ namespace InterfazGrafica
             String strCedula = tbCedula.Text;
             String strApellido = tbApellido.Text;
             String strCorreo = tbCorreo.Text;
-            String strTelefono = tbTelefono.Text;
+            String strTelefono = maskedTextBox1.Text;
 
             mantenimiento.InsertarCliente(strCedula, strNombre, strApellido, strCorreo, strTelefono);
             this.Close();
@@ -40,7 +40,7 @@ namespace InterfazGrafica
         private void btnModificar_Click(object sender, EventArgs e)
         {
             MantenimientoClientes clientes = new MantenimientoClientes();
-            clientes.ActualizarCliente(tbCedula.Text, tbNombre.Text, tbApellido.Text, tbCorreo.Text, tbTelefono.Text);
+            clientes.ActualizarCliente(tbCedula.Text, tbNombre.Text, tbApellido.Text, tbCorreo.Text, maskedTextBox1.Text);
         }
 
         public Button GetButtonModificar() {
@@ -50,9 +50,5 @@ namespace InterfazGrafica
             return btnInsertar;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(maskedTextBox1.Text);
-        }
     }
 }

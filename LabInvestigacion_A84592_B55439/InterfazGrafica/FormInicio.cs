@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using InterfazGrafica.InterfazProducto;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,12 @@ namespace InterfazGrafica
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormMenuProducto frmMenuProd = new FormMenuProducto();
+            frmMenuProd.Show();
         }
     }
 }

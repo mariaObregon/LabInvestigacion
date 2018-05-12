@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace InterfazGrafica.InterfazProducto
         public FormDatosProducto()
         {
             InitializeComponent();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            MantenimientoProductos productos = new MantenimientoProductos();
+            productos.ActualizarProducto(tbCodigo.Text, tbDescripcion.Text, tbPrecio.Text, textBox4.Text);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,10 +12,11 @@ namespace Datos
 
         public List<Producto> GetProductos(String codigo)
         {
+            long newCode = long.Parse(codigo);
             using (ModeloDB db = new ModeloDB())
             {
                 var producto = from p in db.Producto
-                               where p.Codigo.Equals(codigo)
+                               where p.Codigo == newCode
                               select p;
 
                 return producto.ToList();
@@ -26,20 +27,21 @@ namespace Datos
 
         public String ModificarProducto(String codigo, String descripcion, String precioVenta, String cantInv)
         {
+            long newCode = long.Parse(codigo);
             using (ModeloDB db = new ModeloDB())
             {
 
                 var producto = from p in db.Producto
-                               where p.Codigo.Equals(codigo)
-                              select p;
+                               where p.Codigo == newCode
+                               select p;
 
                 if (producto.Any<Producto>())
                 {
                     foreach (var p in producto)
                     {
                         p.Descripcion = descripcion;
-                        p.Precio = Convert.ToDecimal(precioVenta);
-                        p.CantidadInventario = Convert.ToInt16(cantInv);
+                        p.Precio = decimal.Parse(precioVenta);
+                        p.CantidadInventario = int.Parse(cantInv);
 
                     }
                     db.SaveChanges();
