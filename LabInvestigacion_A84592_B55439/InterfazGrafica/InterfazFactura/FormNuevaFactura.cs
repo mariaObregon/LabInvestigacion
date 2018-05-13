@@ -16,5 +16,15 @@ namespace InterfazGrafica.InterfazFactura
         {
             InitializeComponent();
         }
+
+        private void btnCrearFactura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarDetalle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

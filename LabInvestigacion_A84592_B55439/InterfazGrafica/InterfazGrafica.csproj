@@ -135,6 +135,9 @@
     <EmbeddedResource Include="InterfazCliente\FormDatosUsuario.resx">
       <DependentUpon>FormDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfazFactura\FormNuevaFactura.resx">
+      <DependentUpon>FormNuevaFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazProducto\FormDatosProducto.resx">
       <DependentUpon>FormDatosProducto.cs</DependentUpon>
     </EmbeddedResource>

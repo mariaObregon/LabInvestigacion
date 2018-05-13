@@ -1,13 +1,6 @@
 ﻿using InterfazGrafica.InterfazProducto;
-using Negocio;
+using InterfazGrafica.InterfazFactura;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfazGrafica
@@ -36,6 +29,11 @@ namespace InterfazGrafica
         {
             FormMenuProducto frmMenuProd = new FormMenuProducto();
             frmMenuProd.Show();
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            new FormNuevaFactura().ShowDialog();
         }
     }
 }
