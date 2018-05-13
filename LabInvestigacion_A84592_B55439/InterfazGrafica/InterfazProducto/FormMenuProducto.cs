@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfazGrafica.InterfazProducto
@@ -17,32 +10,36 @@ namespace InterfazGrafica.InterfazProducto
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnMostrar_Click(object sender, EventArgs e)
         {
 
             FormConsultarProducto frm = new FormConsultarProducto();
-            frm.Show();
+            frm.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnInsertar_Click(object sender, EventArgs e)
         {
-
+            FormDatosProducto datosProducto = new FormDatosProducto();
+            datosProducto.GetButtonInsertar().Visible = true;
+            datosProducto.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)
         {
-
+            new FormEliminarProducto().ShowDialog(); ;
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnModificar_Click(object sender, EventArgs e)
         {
             FormDatosProducto frm = new FormDatosProducto();
-            frm.Show();
+            frm.GetButtonModificar().Visible = true;
+            frm.ShowDialog();
         }
     }
 }

@@ -4,7 +4,6 @@ using System.Linq;
 using Entidad;
 using Datos;
 using System.Windows.Forms;
-using ExcepcionesUsuario;
 
 namespace Negocio
 {

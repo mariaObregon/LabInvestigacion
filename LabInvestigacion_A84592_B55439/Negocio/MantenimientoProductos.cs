@@ -46,5 +46,51 @@ namespace Negocio
             MessageBox.Show(consultar.ModificarProducto(codigo, descripcion, precio, cantidadInv), "Aviso"); ;
 
         }
+
+        public void InsertarProducto(String strCodigo, String strDescripcion, String strPrecioVenta, String strCantInv)
+        {
+
+            if (!ListaVacia(strCodigo))
+            {
+                throw new ExcepcionExisteID();
+            }
+           
+            else if (strCodigo.Trim() == String.Empty || strDescripcion.Trim() == String.Empty ||
+                     strPrecioVenta.Trim() == String.Empty || strCantInv.Trim() == String.Empty)
+            {
+                throw new ExcepcionEsVacio();
+            }
+            else
+            {
+                consultar.InsertarProducto(strCodigo, strDescripcion, strPrecioVenta, strCantInv);
+            }
+        }
+
+        public void EliminarProducto(String strCodigo) {
+            consultar.EliminarProducto(strCodigo);
+        }
+
+        public void VerificarExisteProducto(String strCodigo)
+        {
+            if (strCodigo.Trim() == String.Empty)
+            {
+                throw new ExcepcionEsVacio();
+            }
+            else if (ListaVacia(strCodigo))
+            {
+                throw new ExcepcionNoExisteID();
+            }
+        }
+
+        public Boolean ListaVacia(String strCodigo)
+        {
+            return !consultar.GetProductos(strCodigo).Any<Producto>();
+        }
+
+
+        public List<Producto> GetProductos(string strCodigo)
+        {
+            return consultar.GetProductos(strCodigo);
+        }
     }
 }

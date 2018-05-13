@@ -1,5 +1,4 @@
-﻿using ExcepcionesUsuario;
-using Negocio;
+﻿using Negocio;
 using System;
 using System.Windows.Forms;
 
@@ -25,7 +24,7 @@ namespace InterfazGrafica
             if (opcion == DialogResult.Yes)
             {
                 mantenimiento.EliminarCliente(strCedula);
-                MessageBox.Show("El cliente ha sido eliminado", "Mensaje");
+                MessageBox.Show("El cliente y sus facturas han sido eliminados", "Mensaje");
                 tbCedula.Clear();
                 btnEliminar.Enabled = false;
                 FillDataGrid(strCedula);
@@ -48,9 +47,11 @@ namespace InterfazGrafica
 
             } catch (ExcepcionNoExisteID ex) {
                 MessageBox.Show(ex.Message, "Error");
+                btnEliminar.Enabled = false;
             }
             catch (ExcepcionEsVacio ex) {
                 MessageBox.Show(ex.Message, "Error");
+                btnEliminar.Enabled = false;
             }
 }
 

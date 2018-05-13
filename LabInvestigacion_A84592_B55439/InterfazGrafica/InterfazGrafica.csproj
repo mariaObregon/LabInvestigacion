@@ -141,6 +141,9 @@
     <EmbeddedResource Include="InterfazProducto\FormConsultarProducto.resx">
       <DependentUpon>FormConsultarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfazProducto\FormEliminarProducto.resx">
+      <DependentUpon>FormEliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazProducto\FormMenuProducto.resx">
       <DependentUpon>FormMenuProducto.cs</DependentUpon>
     </EmbeddedResource>

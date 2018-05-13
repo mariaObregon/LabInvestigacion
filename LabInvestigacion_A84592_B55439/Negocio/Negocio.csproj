@@ -41,11 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Excepciones.cs" />
-    <Compile Include="ExcepcionesUsuario\ExcepcionCorreoInvalido.cs" />
-    <Compile Include="ExcepcionesUsuario\ExcepcionEsVacio.cs" />
-    <Compile Include="ExcepcionesUsuario\ExcepcionExisteID.cs" />
-    <Compile Include="ExcepcionesUsuario\ExcepcionNoExisteID.cs" />
+    <Compile Include="Excepciones\ExcepcionCorreoInvalido.cs" />
+    <Compile Include="Excepciones\ExcepcionEsVacio.cs" />
+    <Compile Include="Excepciones\ExcepcionExisteID.cs" />
+    <Compile Include="Excepciones\ExcepcionNoExisteID.cs" />
     <Compile Include="MantenimientoFactura.cs" />
     <Compile Include="MantenimientoProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

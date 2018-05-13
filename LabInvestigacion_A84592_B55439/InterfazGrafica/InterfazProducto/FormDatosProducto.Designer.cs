@@ -35,7 +35,7 @@
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.tbPrecio = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbCantidad = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -100,12 +100,12 @@
             this.tbPrecio.Size = new System.Drawing.Size(198, 20);
             this.tbPrecio.TabIndex = 6;
             // 
-            // textBox4
+            // tbCantidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(218, 180);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 20);
-            this.textBox4.TabIndex = 7;
+            this.tbCantidad.Location = new System.Drawing.Point(218, 180);
+            this.tbCantidad.Name = "tbCantidad";
+            this.tbCantidad.Size = new System.Drawing.Size(198, 20);
+            this.tbCantidad.TabIndex = 7;
             // 
             // btnIngresar
             // 
@@ -115,6 +115,8 @@
             this.btnIngresar.TabIndex = 8;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Visible = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnModificar
             // 
@@ -124,6 +126,7 @@
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Visible = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnVolver
@@ -144,6 +147,7 @@
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Visible = false;
             // 
             // FormDatosProducto
             // 
@@ -154,7 +158,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbCantidad);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.tbCodigo);
@@ -178,7 +182,7 @@
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.TextBox tbPrecio;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbCantidad;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnVolver;

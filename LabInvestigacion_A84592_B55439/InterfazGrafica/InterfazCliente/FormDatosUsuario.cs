@@ -1,4 +1,4 @@
-﻿using ExcepcionesUsuario;
+﻿
 using Negocio;
 using System;
 using System.Windows.Forms;

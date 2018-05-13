@@ -28,73 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnInsertar
             // 
-            this.button1.Location = new System.Drawing.Point(77, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Insertar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnInsertar.Location = new System.Drawing.Point(77, 84);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(148, 65);
+            this.btnInsertar.TabIndex = 0;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.Location = new System.Drawing.Point(262, 84);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 65);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnModificar.Location = new System.Drawing.Point(262, 84);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(148, 65);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
-            // button3
+            // btnMostrar
             // 
-            this.button3.Location = new System.Drawing.Point(77, 196);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 65);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Mostrar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnMostrar.Location = new System.Drawing.Point(77, 196);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(148, 65);
+            this.btnMostrar.TabIndex = 2;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
             // 
-            // button4
+            // btnEliminar
             // 
-            this.button4.Location = new System.Drawing.Point(262, 196);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 65);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnEliminar.Location = new System.Drawing.Point(262, 196);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(148, 65);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // button5
+            // btnVolver
             // 
-            this.button5.Location = new System.Drawing.Point(161, 307);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 65);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Volver";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnVolver.Location = new System.Drawing.Point(161, 307);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(148, 65);
+            this.btnVolver.TabIndex = 4;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.Button5_Click);
             // 
             // FormMenuProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnInsertar);
             this.Name = "FormMenuProducto";
             this.Text = "FormMenuProducto";
             this.ResumeLayout(false);
@@ -103,10 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
