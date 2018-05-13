@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Entidad;
 using Datos;
 using System.Windows.Forms;
+using ExcepcionesUsuario;
 
 namespace Negocio
 {
@@ -17,16 +16,48 @@ namespace Negocio
                                            String apellido, String correo,
                                            String telefono)
         {
-            consultar.InsertarCliente(cedula, nombre, apellido, correo, telefono);
+
+            RegexUtilities regexUtilities = new RegexUtilities();
+
+            if (!ListaVacia(cedula))
+            {
+                throw new ExcepcionExisteID();
+            }
+            else if (false)
+            {
+                throw new ExcepcionCorreoInvalido();
+            }
+            else if (cedula.Trim() == String.Empty || nombre.Trim() == String.Empty ||
+                     apellido.Trim() == String.Empty || correo.Trim() == String.Empty ||
+                     telefono.Trim() == String.Empty)
+            {
+                throw new ExcepcionEsVacio();
+            }
+            else
+            {
+
+                consultar.InsertarCliente(cedula, nombre, apellido, correo, telefono);
+            }
         }
 
-        public void EliminarCliente(String cedula) {
+        public void EliminarCliente(String cedula)
+        {
 
             consultar.EliminarCliente(cedula);
         }
 
-        public String MostrarCliente(String cedula) {
-            
+        public void VerificarExisteCliente(String strCedula) {
+            if (strCedula.Trim() == String.Empty) {
+                throw new ExcepcionEsVacio();
+            }
+            else if (ListaVacia(strCedula)) {
+                throw new ExcepcionNoExisteID();
+            }
+        }
+
+        public String MostrarCliente(String cedula)
+        {
+
             String datos = null;
             List<Cliente> lista = consultar.GetClientes(cedula);
             foreach (var item in lista)
@@ -36,14 +67,16 @@ namespace Negocio
             return datos;
         }
 
-        
+
 
         public void ActualizarCliente(String cedula, String nombre, String apellido, String correo, String telefono)
         {
-            if (cedula.Trim() == "" || cedula == null) {
+            if (cedula.Trim() == "" || cedula == null)
+            {
                 MessageBox.Show("Cedula vacia", "Error");
-            } 
-            if (nombre.Trim() == "" || nombre == null) {
+            }
+            if (nombre.Trim() == "" || nombre == null)
+            {
                 MessageBox.Show("Nombre vacio", "Error");
             }
             if (apellido.Trim() == "" || apellido == null)
@@ -58,18 +91,20 @@ namespace Negocio
             {
                 MessageBox.Show("Telefono vacio", "Error");
             }
-                MessageBox.Show(consultar.ModificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
-            
+            MessageBox.Show(consultar.ModificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
+
         }
 
         public Boolean ListaVacia(String cedula)
         {
-            return consultar.GetClientes(cedula).Any<Cliente>();
+            return !consultar.GetClientes(cedula).Any<Cliente>();
         }
 
-        public List<Cliente> GetClientes(string strCedula) {
+
+        public List<Cliente> GetClientes(string strCedula)
+        {
             return consultar.GetClientes(strCedula);
         }
     }
-       
+
 }

@@ -40,7 +40,7 @@
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lbCedula
@@ -148,20 +148,20 @@
             this.btnModificar.Visible = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // maskedTextBox1
+            // tbTelefono
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(93, 200);
-            this.maskedTextBox1.Mask = "0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 13;
+            this.tbTelefono.Location = new System.Drawing.Point(93, 200);
+            this.tbTelefono.Mask = "0000-0000";
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(100, 20);
+            this.tbTelefono.TabIndex = 13;
             // 
             // FormDatosUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 338);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.tbTelefono);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnInsertar);
@@ -196,6 +196,6 @@
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbTelefono;
     }
 }

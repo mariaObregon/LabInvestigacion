@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using ExcepcionesUsuario;
+using Negocio;
 using System;
 using System.Windows.Forms;
 
@@ -41,25 +42,22 @@ namespace InterfazGrafica
             strCedula = tbCedula.Text;
             FillDataGrid(strCedula);
 
-            if (mantenimiento.ListaVacia(strCedula))
-            {
+            try {
+                mantenimiento.VerificarExisteCliente(strCedula);
                 btnEliminar.Enabled = true;
+
+            } catch (ExcepcionNoExisteID ex) {
+                MessageBox.Show(ex.Message, "Error");
             }
-            else
-            {
-                MessageBox.Show("El cliente ingresado no existe", "Mensaje");
+            catch (ExcepcionEsVacio ex) {
+                MessageBox.Show(ex.Message, "Error");
             }
-        }
+}
 
         private void FillDataGrid(String strCedula)
         {
             dataGridView.DataSource = mantenimiento.GetClientes(strCedula);
             dataGridView.Columns.RemoveAt(5);
-        }
-
-        private void getCedula()
-        {
-            strCedula = tbCedula.Text;
-        }
+        }    
     }
 }
