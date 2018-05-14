@@ -82,5 +82,24 @@ namespace Negocio
             return subTotal;
         }
 
+
+        public string Facturacion(String cedula, DateTime fechaInicio, DateTime fechaFin) {
+            List<Factura> facturas = consultar.HistorialFacturas(cedula, fechaInicio, fechaFin);
+            String datos = "#Factura           Fecha            Total"+ String.Format(Environment.NewLine);
+            decimal total = 0;
+            decimal totalGeneral = 0;
+            foreach (Factura f in facturas) {
+                
+                foreach (LineaDetalle ld in f.LineaDetalle) { //aca tira error algo de la conexion
+                    total += ld.Precio * ld.Cantidad;
+                }
+                datos += f.IdFactura + "           " + Convert.ToDateTime(f.FechaFactura) + "          " + total 
+                    + String.Format(Environment.NewLine)+ String.Format(Environment.NewLine);
+                totalGeneral += total;
+                total = 0;
+            }
+            datos += "Total General             " + totalGeneral;
+            return datos;
+        }
     }
 }

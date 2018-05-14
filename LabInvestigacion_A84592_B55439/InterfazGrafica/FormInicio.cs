@@ -35,5 +35,11 @@ namespace InterfazGrafica
         {
             new FormNuevaFactura().ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormFacturacion frm = new FormFacturacion();
+            frm.Show();
+        }
     }
 }

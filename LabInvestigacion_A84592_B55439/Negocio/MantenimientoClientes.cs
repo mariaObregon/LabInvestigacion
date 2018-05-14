@@ -4,6 +4,7 @@ using System.Linq;
 using Entidad;
 using Datos;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Negocio
 {
@@ -74,24 +75,26 @@ namespace Negocio
             {
                 MessageBox.Show("Cedula vacia", "Error");
             }
-            if (nombre.Trim() == "" || nombre == null)
+            else if (nombre.Trim() == "" || nombre == null)
             {
                 MessageBox.Show("Nombre vacio", "Error");
             }
-            if (apellido.Trim() == "" || apellido == null)
+            else if (apellido.Trim() == "" || apellido == null)
             {
                 MessageBox.Show("Apellido vacio", "Error");
             }
-            if (correo.Trim() == "" || correo == null)
+            else if (correo.Trim() == "" || correo == null || ValidarCorreo(correo) == false)
             {
-                MessageBox.Show("Correo vacio", "Error");
+                MessageBox.Show("Formato correo invalido", "Error");
             }
-            if (telefono.Trim() == "" || telefono == null)
+            else if (telefono.Trim() == "" || telefono == null)
             {
                 MessageBox.Show("Telefono vacio", "Error");
             }
-            MessageBox.Show(consultar.ModificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
-
+            else
+            {
+                MessageBox.Show(consultar.ModificarCliente(cedula, nombre, apellido, correo, telefono), "Aviso"); ;
+            }
         }
 
         public Boolean ListaVacia(String cedula)
@@ -103,6 +106,13 @@ namespace Negocio
         public List<Cliente> GetClientes(string strCedula)
         {
             return consultar.GetClientes(strCedula);
+        }
+
+
+        public Boolean ValidarCorreo(String correo)
+        {
+            Regex oRegExp = new Regex(@"^[A-Za-z0-9_.\-]+@[A-Za-z0-9_\-]+\.([A-Za-z0-9_\-]+\.)*[A-Za-z][A-Za-z]+$", RegexOptions.IgnoreCase);
+            return oRegExp.Match(correo).Success;
         }
     }
 

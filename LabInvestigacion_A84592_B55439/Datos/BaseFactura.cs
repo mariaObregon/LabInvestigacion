@@ -1,6 +1,7 @@
 ﻿using Entidad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace Datos
@@ -16,7 +17,7 @@ namespace Datos
             }
         }
 
-    
+
 
         public void InsertarFactura(String strNumeroFactura, String strCedula)
         {
@@ -28,7 +29,7 @@ namespace Datos
                     Cedula = strCedula,
                     FechaFactura = db.Database.SqlQuery<DateTime>("SELECT GETDATE() Fecha").SingleOrDefault()
 
-            };
+                };
                 db.Factura.Add(factura);
                 db.SaveChanges();
             }
@@ -46,5 +47,37 @@ namespace Datos
                 return factura.ToList();
             }
         }
+
+        public List<Factura> HistorialFacturas(String cedula, DateTime fechaInicio, DateTime fechaFin) {
+
+
+            using (ModeloDB db = new ModeloDB())
+            {
+
+                var facturas = from f in db.Factura
+                              where f.Cedula.Equals(cedula)
+                              && (f.FechaFactura >= fechaInicio && f.FechaFactura <= fechaFin)
+                              select f;
+                
+                return facturas.ToList();
+            }
+                
+        }
     }
 }
+//from order in Customer.Orders...
+
+
+/* var historico = from f in db.Factura
+                 join ld in db.LineaDetalle on f.IdFactura equals ld.IdFactura
+                 group ld by ld.IdFactura into f.IdFactura, f.FechaFactura
+                 where f.Cedula.Equals(cedula) && (f.FechaFactura >= fechaFin.Date && f.FechaFactura <= fechaInicio)
+                 orderby f.FechaFactura
+
+                 select new
+                 {
+                     f.IdFactura,
+                     f.FechaFactura//,
+                     //(ld.Cantidad * ld.Precio)
+
+                 };*/
