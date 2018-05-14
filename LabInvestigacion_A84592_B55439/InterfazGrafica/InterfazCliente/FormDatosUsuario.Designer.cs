@@ -125,7 +125,7 @@
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Visible = false;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            this.btnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // btnCancelar
             // 
@@ -135,7 +135,7 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Volver";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnModificar
             // 
@@ -146,7 +146,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Visible = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // tbTelefono
             // 

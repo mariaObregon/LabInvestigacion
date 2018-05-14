@@ -31,14 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.tbCedula = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewC = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lbCodigoP = new System.Windows.Forms.Label();
-            this.lbDetalle = new System.Windows.Forms.Label();
             this.lbCantidad = new System.Windows.Forms.Label();
             this.lbPrecio = new System.Windows.Forms.Label();
             this.btnAgregarDetalle = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewD = new System.Windows.Forms.DataGridView();
+            this.FacturaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LineaDetalleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.tbCodigoP = new System.Windows.Forms.TextBox();
             this.tbPrecio = new System.Windows.Forms.TextBox();
@@ -49,14 +53,19 @@
             this.lbRequisito = new System.Windows.Forms.Label();
             this.lbNumeroLinea = new System.Windows.Forms.Label();
             this.tbNumeroLinea = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lbSubTotal = new System.Windows.Forms.Label();
+            this.tbSubTotal = new System.Windows.Forms.TextBox();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 37);
+            this.label1.Location = new System.Drawing.Point(45, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 0;
@@ -65,61 +74,53 @@
             // lbID
             // 
             this.lbID.AutoSize = true;
-            this.lbID.Location = new System.Drawing.Point(68, 74);
+            this.lbID.Location = new System.Drawing.Point(45, 74);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(97, 13);
+            this.lbID.Size = new System.Drawing.Size(91, 13);
             this.lbID.TabIndex = 1;
-            this.lbID.Text = "Seleccionar cliente";
+            this.lbID.Text = "Cedula del cliente";
             // 
             // tbCedula
             // 
-            this.tbCedula.Location = new System.Drawing.Point(171, 67);
+            this.tbCedula.Location = new System.Drawing.Point(152, 69);
             this.tbCedula.Name = "tbCedula";
             this.tbCedula.Size = new System.Drawing.Size(100, 20);
             this.tbCedula.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataGridViewC
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 84);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridViewC.AllowUserToAddRows = false;
+            this.dataGridViewC.AllowUserToDeleteRows = false;
+            this.dataGridViewC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewC.Location = new System.Drawing.Point(41, 111);
+            this.dataGridViewC.Name = "dataGridViewC";
+            this.dataGridViewC.ReadOnly = true;
+            this.dataGridViewC.Size = new System.Drawing.Size(474, 89);
+            this.dataGridViewC.TabIndex = 3;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(290, 67);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(114, 23);
             this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Text = "Verificar cliente";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lbCodigoP
             // 
             this.lbCodigoP.AutoSize = true;
-            this.lbCodigoP.Location = new System.Drawing.Point(577, 306);
+            this.lbCodigoP.Location = new System.Drawing.Point(574, 254);
             this.lbCodigoP.Name = "lbCodigoP";
             this.lbCodigoP.Size = new System.Drawing.Size(102, 13);
             this.lbCodigoP.TabIndex = 7;
             this.lbCodigoP.Text = "Codigo del producto";
             // 
-            // lbDetalle
-            // 
-            this.lbDetalle.AutoSize = true;
-            this.lbDetalle.Location = new System.Drawing.Point(574, 224);
-            this.lbDetalle.Name = "lbDetalle";
-            this.lbDetalle.Size = new System.Drawing.Size(121, 13);
-            this.lbDetalle.TabIndex = 8;
-            this.lbDetalle.Text = "Agregar linea de detalle:";
-            // 
             // lbCantidad
             // 
             this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Location = new System.Drawing.Point(574, 382);
+            this.lbCantidad.Location = new System.Drawing.Point(574, 354);
             this.lbCantidad.Name = "lbCantidad";
             this.lbCantidad.Size = new System.Drawing.Size(49, 13);
             this.lbCantidad.TabIndex = 9;
@@ -128,7 +129,7 @@
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
-            this.lbPrecio.Location = new System.Drawing.Point(574, 343);
+            this.lbPrecio.Location = new System.Drawing.Point(574, 303);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(37, 13);
             this.lbPrecio.TabIndex = 10;
@@ -136,29 +137,73 @@
             // 
             // btnAgregarDetalle
             // 
-            this.btnAgregarDetalle.Location = new System.Drawing.Point(828, 372);
+            this.btnAgregarDetalle.Location = new System.Drawing.Point(577, 399);
             this.btnAgregarDetalle.Name = "btnAgregarDetalle";
-            this.btnAgregarDetalle.Size = new System.Drawing.Size(114, 23);
+            this.btnAgregarDetalle.Size = new System.Drawing.Size(187, 23);
             this.btnAgregarDetalle.TabIndex = 12;
             this.btnAgregarDetalle.Text = "Agregar detalle";
             this.btnAgregarDetalle.UseVisualStyleBackColor = true;
-            this.btnAgregarDetalle.Click += new System.EventHandler(this.btnAgregarDetalle_Click);
+            this.btnAgregarDetalle.Click += new System.EventHandler(this.BtnAgregarDetalle_Click);
             // 
-            // dataGridView2
+            // dataGridViewD
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(68, 299);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(430, 150);
-            this.dataGridView2.TabIndex = 14;
+            this.dataGridViewD.AllowUserToAddRows = false;
+            this.dataGridViewD.AllowUserToDeleteRows = false;
+            this.dataGridViewD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FacturaId,
+            this.LineaDetalleId,
+            this.ProductoId,
+            this.Precio,
+            this.Cantidad});
+            this.dataGridViewD.Location = new System.Drawing.Point(41, 245);
+            this.dataGridViewD.Name = "dataGridViewD";
+            this.dataGridViewD.ReadOnly = true;
+            this.dataGridViewD.Size = new System.Drawing.Size(474, 150);
+            this.dataGridViewD.TabIndex = 14;
+            // 
+            // FacturaId
+            // 
+            this.FacturaId.Frozen = true;
+            this.FacturaId.HeaderText = "# Factura";
+            this.FacturaId.Name = "FacturaId";
+            this.FacturaId.ReadOnly = true;
+            this.FacturaId.Width = 80;
+            // 
+            // LineaDetalleId
+            // 
+            this.LineaDetalleId.Frozen = true;
+            this.LineaDetalleId.HeaderText = "# Linea de detalle";
+            this.LineaDetalleId.Name = "LineaDetalleId";
+            this.LineaDetalleId.ReadOnly = true;
+            // 
+            // ProductoId
+            // 
+            this.ProductoId.Frozen = true;
+            this.ProductoId.HeaderText = "Codigo de Producto";
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.Frozen = true;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 80;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.Frozen = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(68, 276);
+            this.label7.Location = new System.Drawing.Point(45, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 13);
             this.label7.TabIndex = 15;
@@ -166,34 +211,34 @@
             // 
             // tbCodigoP
             // 
-            this.tbCodigoP.Location = new System.Drawing.Point(692, 299);
+            this.tbCodigoP.Location = new System.Drawing.Point(692, 251);
             this.tbCodigoP.Name = "tbCodigoP";
             this.tbCodigoP.Size = new System.Drawing.Size(100, 20);
             this.tbCodigoP.TabIndex = 16;
             // 
             // tbPrecio
             // 
-            this.tbPrecio.Location = new System.Drawing.Point(692, 336);
+            this.tbPrecio.Location = new System.Drawing.Point(692, 300);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(100, 20);
             this.tbPrecio.TabIndex = 17;
             // 
             // tbCantidad
             // 
-            this.tbCantidad.Location = new System.Drawing.Point(692, 375);
+            this.tbCantidad.Location = new System.Drawing.Point(692, 354);
             this.tbCantidad.Name = "tbCantidad";
             this.tbCantidad.Size = new System.Drawing.Size(100, 20);
             this.tbCantidad.TabIndex = 18;
             // 
             // btnCrearFactura
             // 
-            this.btnCrearFactura.Location = new System.Drawing.Point(577, 426);
+            this.btnCrearFactura.Location = new System.Drawing.Point(577, 446);
             this.btnCrearFactura.Name = "btnCrearFactura";
             this.btnCrearFactura.Size = new System.Drawing.Size(187, 23);
             this.btnCrearFactura.TabIndex = 13;
             this.btnCrearFactura.Text = "Crear factura y salir ";
             this.btnCrearFactura.UseVisualStyleBackColor = true;
-            this.btnCrearFactura.Click += new System.EventHandler(this.btnCrearFactura_Click);
+            this.btnCrearFactura.Click += new System.EventHandler(this.BtnCrearFactura_Click);
             // 
             // tbFactura
             // 
@@ -223,7 +268,7 @@
             // lbNumeroLinea
             // 
             this.lbNumeroLinea.AutoSize = true;
-            this.lbNumeroLinea.Location = new System.Drawing.Point(577, 262);
+            this.lbNumeroLinea.Location = new System.Drawing.Point(574, 205);
             this.lbNumeroLinea.Name = "lbNumeroLinea";
             this.lbNumeroLinea.Size = new System.Drawing.Size(88, 13);
             this.lbNumeroLinea.TabIndex = 19;
@@ -231,42 +276,93 @@
             // 
             // tbNumeroLinea
             // 
-            this.tbNumeroLinea.Location = new System.Drawing.Point(692, 262);
+            this.tbNumeroLinea.Location = new System.Drawing.Point(692, 198);
             this.tbNumeroLinea.Name = "tbNumeroLinea";
             this.tbNumeroLinea.Size = new System.Drawing.Size(100, 20);
             this.tbNumeroLinea.TabIndex = 20;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(825, 446);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lbSubTotal
+            // 
+            this.lbSubTotal.AutoSize = true;
+            this.lbSubTotal.Location = new System.Drawing.Point(290, 410);
+            this.lbSubTotal.Name = "lbSubTotal";
+            this.lbSubTotal.Size = new System.Drawing.Size(49, 13);
+            this.lbSubTotal.TabIndex = 22;
+            this.lbSubTotal.Text = "Sub total";
+            // 
+            // tbSubTotal
+            // 
+            this.tbSubTotal.Location = new System.Drawing.Point(365, 402);
+            this.tbSubTotal.Name = "tbSubTotal";
+            this.tbSubTotal.ReadOnly = true;
+            this.tbSubTotal.Size = new System.Drawing.Size(133, 20);
+            this.tbSubTotal.TabIndex = 23;
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.Location = new System.Drawing.Point(812, 147);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(75, 23);
+            this.btnVerificar.TabIndex = 24;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.BtnVerificar_Click);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Location = new System.Drawing.Point(423, 67);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.TabIndex = 25;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.BtnSeleccionar_Click);
             // 
             // FormNuevaFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 503);
+            this.Controls.Add(this.btnSeleccionar);
+            this.Controls.Add(this.btnVerificar);
+            this.Controls.Add(this.tbSubTotal);
+            this.Controls.Add(this.lbSubTotal);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.tbNumeroLinea);
             this.Controls.Add(this.lbNumeroLinea);
             this.Controls.Add(this.tbCantidad);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.tbCodigoP);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewD);
             this.Controls.Add(this.btnCrearFactura);
             this.Controls.Add(this.btnAgregarDetalle);
             this.Controls.Add(this.tbFactura);
             this.Controls.Add(this.lbPrecio);
             this.Controls.Add(this.lbCantidad);
-            this.Controls.Add(this.lbDetalle);
             this.Controls.Add(this.lbCodigoP);
             this.Controls.Add(this.lbFactura);
             this.Controls.Add(this.lbRequisito);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewC);
             this.Controls.Add(this.tbCedula);
             this.Controls.Add(this.lbID);
             this.Controls.Add(this.label1);
             this.Name = "FormNuevaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNuevaFactura";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,14 +373,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.TextBox tbCedula;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewC;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lbCodigoP;
-        private System.Windows.Forms.Label lbDetalle;
         private System.Windows.Forms.Label lbCantidad;
         private System.Windows.Forms.Label lbPrecio;
         private System.Windows.Forms.Button btnAgregarDetalle;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewD;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbCodigoP;
         private System.Windows.Forms.TextBox tbPrecio;
@@ -295,5 +390,15 @@
         private System.Windows.Forms.Label lbRequisito;
         private System.Windows.Forms.Label lbNumeroLinea;
         private System.Windows.Forms.TextBox tbNumeroLinea;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lbSubTotal;
+        private System.Windows.Forms.TextBox tbSubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FacturaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LineaDetalleId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Button btnVerificar;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

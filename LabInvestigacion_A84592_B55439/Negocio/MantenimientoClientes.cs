@@ -47,7 +47,7 @@ namespace Negocio
 
         public void VerificarExisteCliente(String strCedula) {
             if (strCedula.Trim() == String.Empty) {
-                throw new ExcepcionEsVacio();
+                throw new ExcepcionEsVacio("Debe ingresar un numero de cedula");
             }
             else if (ListaVacia(strCedula)) {
                 throw new ExcepcionNoExisteID();

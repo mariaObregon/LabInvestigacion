@@ -14,7 +14,7 @@ namespace InterfazGrafica
             InitializeComponent();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void BtnInsertar_Click(object sender, EventArgs e)
         {
             String strNombre = tbNombre.Text;
             String strCedula = tbCedula.Text;
@@ -47,12 +47,12 @@ namespace InterfazGrafica
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void BtnModificar_Click(object sender, EventArgs e)
         {
             MantenimientoClientes clientes = new MantenimientoClientes();
             clientes.ActualizarCliente(tbCedula.Text, tbNombre.Text, tbApellido.Text, tbCorreo.Text, tbTelefono.Text);

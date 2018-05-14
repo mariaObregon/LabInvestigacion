@@ -78,7 +78,7 @@ namespace Negocio
             }
             else if (ListaVacia(strCodigo))
             {
-                throw new ExcepcionNoExisteID();
+                throw new ExcepcionNoExisteID("El codigo de producto no existe");
             }
         }
 
