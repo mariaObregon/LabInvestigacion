@@ -17,13 +17,13 @@ namespace Negocio
                                            String telefono)
         {
 
-            RegexUtilities regexUtilities = new RegexUtilities();
+            
 
             if (!ListaVacia(cedula))
             {
                 throw new ExcepcionExisteID();
             }
-            else if (false)
+            else if (!ValidarCorreo(correo))
             {
                 throw new ExcepcionCorreoInvalido();
             }

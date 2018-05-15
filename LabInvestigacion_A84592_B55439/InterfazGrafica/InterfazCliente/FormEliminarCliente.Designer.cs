@@ -40,17 +40,19 @@
             // 
             // tbCedula
             // 
-            this.tbCedula.Location = new System.Drawing.Point(36, 168);
+            this.tbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCedula.Location = new System.Drawing.Point(34, 171);
             this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(100, 20);
+            this.tbCedula.Size = new System.Drawing.Size(158, 28);
             this.tbCedula.TabIndex = 0;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(630, 215);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(628, 215);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(139, 42);
+            this.btnEliminar.Size = new System.Drawing.Size(197, 52);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // lbCedula
             // 
             this.lbCedula.AutoSize = true;
-            this.lbCedula.Location = new System.Drawing.Point(33, 135);
+            this.lbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCedula.Location = new System.Drawing.Point(31, 138);
             this.lbCedula.Name = "lbCedula";
-            this.lbCedula.Size = new System.Drawing.Size(88, 13);
+            this.lbCedula.Size = new System.Drawing.Size(136, 20);
             this.lbCedula.TabIndex = 2;
             this.lbCedula.Text = "Ingrese la cedula";
             // 
@@ -69,6 +72,7 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(36, 215);
             this.dataGridView.Name = "dataGridView";
@@ -78,9 +82,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(630, 296);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(628, 293);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(139, 43);
+            this.btnCancelar.Size = new System.Drawing.Size(197, 46);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Volver";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -88,9 +93,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(158, 165);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(236, 168);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(62, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(120, 32);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -99,9 +105,11 @@
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Location = new System.Drawing.Point(33, 44);
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.Navy;
+            this.lbTitulo.Location = new System.Drawing.Point(278, 39);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(78, 13);
+            this.lbTitulo.Size = new System.Drawing.Size(250, 41);
             this.lbTitulo.TabIndex = 6;
             this.lbTitulo.Text = "Eliminar Cliente";
             // 

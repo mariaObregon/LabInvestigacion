@@ -1,5 +1,6 @@
 ﻿using Entidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,8 +18,6 @@ namespace Datos
             }
         }
 
-
-
         public void InsertarFactura(String strNumeroFactura, String strCedula)
         {
             using (ModeloDB db = new ModeloDB())
@@ -35,7 +34,7 @@ namespace Datos
             }
         }
 
-        public List<Factura> GetFacturaByFacturaId(String strFacturaID)
+        public List<Factura> GetByFacturaId(String strFacturaID)
         {
             Int64 aux = Int64.Parse(strFacturaID);
             using (ModeloDB db = new ModeloDB())
@@ -48,21 +47,38 @@ namespace Datos
             }
         }
 
-        public List<Factura> HistorialFacturas(String cedula, DateTime fechaInicio, DateTime fechaFin) {
+        public List<LineaDetalle> LineasDetalle(String cedula, DateTime fechaInicio, DateTime fechaFin) {
 
 
             using (ModeloDB db = new ModeloDB())
             {
 
-                var facturas = from f in db.Factura
-                              where f.Cedula.Equals(cedula)
-                              && (f.FechaFactura >= fechaInicio && f.FechaFactura <= fechaFin)
-                              select f;
+                var lineas = from f in db.Factura
+                               join ld in db.LineaDetalle 
+                               on f.IdFactura equals ld.IdFactura
+                               where  f.Cedula.Equals(cedula) && (f.FechaFactura >= fechaInicio && f.FechaFactura <= fechaFin)
+                               select ld;
                 
+                return lineas.ToList();
+            }                
+        }
+
+        public List<Factura> HistorialFacturas(String cedula, DateTime fechaInicio, DateTime fechaFin)
+        {
+
+            using (ModeloDB db = new ModeloDB())
+            {
+
+                var facturas = from f in db.Factura
+                               where f.Cedula.Equals(cedula) && (f.FechaFactura >= fechaInicio && f.FechaFactura <= fechaFin)
+                               select f;
+
                 return facturas.ToList();
             }
-                
         }
+
+
+
     }
 }
 //from order in Customer.Orders...

@@ -11,6 +11,7 @@ namespace Negocio
     public class MantenimientoProductos
     {
         BaseProductos consultar = new BaseProductos();
+        private int restarInventario;
 
         public String mostrarProducto(String codigo)
         {
@@ -92,5 +93,24 @@ namespace Negocio
         {
             return consultar.GetProductos(strCodigo);
         }
+
+        public void CantidadInventario(String strCodigo, string nuevaCantidad)
+        {
+           int disponible= consultar.GetProductos(strCodigo).Single<Producto>().CantidadInventario;
+            restarInventario += Int32.Parse(nuevaCantidad);
+            if ((disponible - restarInventario) < 0)
+            {
+                throw new ExcepcionLimiteInventario("No hay productos suficientes en el inventario");
+            }     
+        }
+
+        public void ModificarInventario(String strCodigo, string nuevaCantidad) {
+            consultar.ModificarCantidad(strCodigo, nuevaCantidad);
+        }
+
+        public int GetRestarInventario() {
+            return restarInventario;
+        }
+        
     }
 }

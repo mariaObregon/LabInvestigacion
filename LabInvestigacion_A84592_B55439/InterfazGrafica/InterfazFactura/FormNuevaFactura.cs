@@ -9,11 +9,13 @@ namespace InterfazGrafica.InterfazFactura
 
         private MantenimientoClientes mantenimiento;
         private MantenimientoFactura mantenimientoFactura;
+        private MantenimientoProductos mantenimientoProducto;
         private String strCedula = "";
         public FormNuevaFactura()
         {
             mantenimiento = new MantenimientoClientes();
             mantenimientoFactura = new MantenimientoFactura();
+            mantenimientoProducto = new MantenimientoProductos();
             InitializeComponent();
         }
 
@@ -35,7 +37,7 @@ namespace InterfazGrafica.InterfazFactura
                 else
                 {
                     mantenimiento.VerificarExisteCliente(strCedula);
-
+                    
                     DialogResult opcion = MessageBox.Show($"¿Desea agregar la factura {tbFactura.Text} al cliente con ID: {strCedula} ?", "Confirmar", MessageBoxButtons.YesNo);
 
                     if (opcion == DialogResult.Yes)
@@ -77,11 +79,14 @@ namespace InterfazGrafica.InterfazFactura
 
                 else
                 {
-                    new MantenimientoProductos().VerificarExisteProducto(tbCodigoP.Text);
+                    
+                    mantenimientoProducto.VerificarExisteProducto(tbCodigoP.Text);
+                    mantenimientoProducto.CantidadInventario(tbCodigoP.Text, tbCantidad.Text);
                     mantenimientoFactura.ExisteNumeroDetalle(tbNumeroLinea.Text);
+                  
                     dataGridViewD.Rows.Add(tbFactura.Text, tbNumeroLinea.Text, tbCodigoP.Text, tbPrecio.Text, tbCantidad.Text);
                     mantenimientoFactura.addList(tbFactura.Text, tbNumeroLinea.Text, tbCodigoP.Text, tbPrecio.Text, tbCantidad.Text);
-                    tbSubTotal.Text = mantenimientoFactura.subTotal().ToString();
+                    tbSubTotal.Text = mantenimientoFactura.SubTotal().ToString();
                 }
 
             }
@@ -96,6 +101,11 @@ namespace InterfazGrafica.InterfazFactura
 
             }
             catch (ExcepcionExisteID ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+
+            }
+            catch (ExcepcionLimiteInventario ex)
             {
                 MessageBox.Show(ex.Message, "Error");
 

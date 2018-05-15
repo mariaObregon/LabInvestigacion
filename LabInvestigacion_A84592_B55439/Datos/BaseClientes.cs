@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Entidad;
 
 namespace Datos
@@ -77,13 +75,11 @@ namespace Datos
         {
             using (ModeloDB db = new ModeloDB())
             {
-        
+
                 /* Selecciona al cliente */
                 var cliente = from c in db.Cliente
                               where c.Cedula == cedula
                               select c;
-
-                Console.WriteLine(cliente.Any<Cliente>());
 
                 /* Si existe algun cliente con esa cedula*/
                 if (cliente.Any<Cliente>())
@@ -92,29 +88,27 @@ namespace Datos
                     var clienteAux = cliente.Single<Cliente>();
 
 
-                    foreach (Factura factura in clienteAux.Factura)
+                    int tamañoListaC = clienteAux.Factura.Count();
+                    for (int i = tamañoListaC - 1; i >= 0 ; i--)
                     {
-                        var detalle = from d in db.LineaDetalle
-                                      where d.IdFactura == factura.IdFactura
-                                      select d;
+                        
+                        Factura facturaActual = clienteAux.Factura.ElementAt<Factura>(i);
 
-                        foreach (LineaDetalle linea in detalle)
+                        int tamañoListaF = facturaActual.LineaDetalle.Count();
+                        for (int j = tamañoListaF - 1; j >= 0 ; j--)
                         {
-                            db.LineaDetalle.Remove(linea);
-                            Console.WriteLine("elimina linea");
+                            LineaDetalle detalle = facturaActual.LineaDetalle.ElementAt<LineaDetalle>(j);
+                            db.LineaDetalle.Remove(detalle);
                         }
 
-                        db.Factura.Remove(factura);
-                        Console.WriteLine("elimina factura");
-
+                        db.Factura.Remove(facturaActual);
                     }
-
+     
                     db.Cliente.Remove(clienteAux);
-                    Console.WriteLine("elimina cliente");
                     db.SaveChanges();
                 }
             }
-        }   
+        }
     }
 }
 

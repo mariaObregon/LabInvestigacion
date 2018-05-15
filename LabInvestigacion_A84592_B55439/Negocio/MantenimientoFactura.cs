@@ -1,6 +1,7 @@
 ﻿using Datos;
 using Entidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +11,7 @@ namespace Negocio
     public class MantenimientoFactura
     {
         private BaseFactura consultar = new BaseFactura();
-       
+        private MantenimientoProductos mantenimientoProductos = new MantenimientoProductos();
 
         private List<LineaDetalle> listaDetalle = new List<LineaDetalle>();
 
@@ -20,7 +21,8 @@ namespace Negocio
             foreach (LineaDetalle linea in listaDetalle)
             {
                 consultar.InsertarLineaDetalle(linea);
-            }  
+                mantenimientoProductos.ModificarInventario((linea.Codigo).ToString(), (linea.Cantidad).ToString());
+            }
         }
 
         public void InsertarFactura(String strNumeroFactura, String strCedula)
@@ -29,21 +31,24 @@ namespace Negocio
             {
                 throw new ExcepcionEsVacio();
             }
-            else { 
-            consultar.InsertarFactura(strNumeroFactura, strCedula);
-            InsertarLinea();
-        }
+            else
+            {
+                consultar.InsertarFactura(strNumeroFactura, strCedula);
+                InsertarLinea();
+            }
         }
 
         public Boolean ListaFacturaVacia(String strNumeroFactura)
         {
-            return !consultar.GetFacturaByFacturaId(strNumeroFactura).Any<Factura>();
+            return !consultar.GetByFacturaId(strNumeroFactura).Any<Factura>();
         }
 
 
         public void addList(String strNumeroFactura, String strNumeroLinea, String strCodigo,
-                                  String strPrecio, String strCantidad) {
-            LineaDetalle linea = new LineaDetalle {
+                                  String strPrecio, String strCantidad)
+        {
+            LineaDetalle linea = new LineaDetalle
+            {
 
                 IdFactura = Int64.Parse(strNumeroFactura),
                 IdLineaDetalle = Int64.Parse(strNumeroLinea),
@@ -56,26 +61,29 @@ namespace Negocio
 
         }
 
-        public void ExisteNumeroDetalle(String strDetalle) {
+        public void ExisteNumeroDetalle(String strDetalle)
+        {
 
-           
+
             for (int i = 0; i < listaDetalle.Count(); i++)
             {
                 Int64 id = listaDetalle.ElementAt<LineaDetalle>(i).IdLineaDetalle;
-                if (id == Int64.Parse(strDetalle)) {
+                if (id == Int64.Parse(strDetalle))
+                {
                     throw new ExcepcionExisteID("El numero de linea de detalle ya existe, ingrese otro");
                 }
-              
+
             }
-    
+
         }
 
-        public Decimal subTotal() {
-            Decimal subTotal= 0;
-            for (int i= 0; i < listaDetalle.Count(); i++)
+        public Decimal SubTotal()
+        {
+            Decimal subTotal = 0;
+            for (int i = 0; i < listaDetalle.Count(); i++)
             {
-             Decimal precio =  listaDetalle.ElementAt<LineaDetalle>(i).Precio;
-             int cantidad = listaDetalle.ElementAt<LineaDetalle>(i).Cantidad;
+                Decimal precio = listaDetalle.ElementAt<LineaDetalle>(i).Precio;
+                int cantidad = listaDetalle.ElementAt<LineaDetalle>(i).Cantidad;
                 subTotal += precio * cantidad;
             }
 
@@ -83,23 +91,28 @@ namespace Negocio
         }
 
 
-        public string Facturacion(String cedula, DateTime fechaInicio, DateTime fechaFin) {
-            List<Factura> facturas = consultar.HistorialFacturas(cedula, fechaInicio, fechaFin);
-            String datos = "#Factura           Fecha            Total"+ String.Format(Environment.NewLine);
-            decimal total = 0;
-            decimal totalGeneral = 0;
-            foreach (Factura f in facturas) {
-                
-                foreach (LineaDetalle ld in f.LineaDetalle) { //aca tira error algo de la conexion
-                    total += ld.Precio * ld.Cantidad;
-                }
-                datos += f.IdFactura + "           " + Convert.ToDateTime(f.FechaFactura) + "          " + total 
-                    + String.Format(Environment.NewLine)+ String.Format(Environment.NewLine);
-                totalGeneral += total;
-                total = 0;
-            }
-            datos += "Total General             " + totalGeneral;
-            return datos;
+        public List<Factura> Facturacion(String cedula, DateTime fechaInicio, DateTime fechaFin)
+        {
+
+            MantenimientoClientes mantenimientoClientes = new MantenimientoClientes();
+
+            mantenimientoClientes.VerificarExisteCliente(cedula);
+
+            return consultar.HistorialFacturas(cedula, fechaInicio, fechaFin);
         }
+
+        public string TotalFacturado(String cedula, DateTime fechaInicio, DateTime fechaFin) {
+            decimal total = 0;
+            foreach (var item in consultar.LineasDetalle(cedula, fechaInicio, fechaFin))
+            {
+                total += (item.Precio * item.Cantidad);
+            }
+            return total.ToString();
+        }
+
+        public List<LineaDetalle> LineaDetallesHistorial(String cedula, DateTime fechaInicio, DateTime fechaFin) {
+            return consultar.LineasDetalle(cedula, fechaInicio, fechaFin);
+        }
+
     }
 }

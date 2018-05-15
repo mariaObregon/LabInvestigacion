@@ -59,6 +59,6 @@ namespace InterfazGrafica
         {
             dataGridView.DataSource = mantenimiento.GetClientes(strCedula);
             dataGridView.Columns.RemoveAt(5);
-        }    
+        }
     }
 }

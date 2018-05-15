@@ -17,7 +17,7 @@ namespace InterfazGrafica
         private void button1_Click(object sender, EventArgs e)
         {
             MenuCliente frmMenuCliente = new MenuCliente();
-            frmMenuCliente.Show();
+            frmMenuCliente.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace InterfazGrafica
         private void button2_Click(object sender, EventArgs e)
         {
             FormMenuProducto frmMenuProd = new FormMenuProducto();
-            frmMenuProd.Show();
+            frmMenuProd.ShowDialog();
         }
 
         private void btnFactura_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace InterfazGrafica
         private void button4_Click(object sender, EventArgs e)
         {
             FormFacturacion frm = new FormFacturacion();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

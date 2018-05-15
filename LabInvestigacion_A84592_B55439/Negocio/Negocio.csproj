@@ -44,12 +44,12 @@
     <Compile Include="Excepciones\ExcepcionCorreoInvalido.cs" />
     <Compile Include="Excepciones\ExcepcionEsVacio.cs" />
     <Compile Include="Excepciones\ExcepcionExisteID.cs" />
+    <Compile Include="Excepciones\ExcepcionLimiteInventario.cs" />
     <Compile Include="Excepciones\ExcepcionNoExisteID.cs" />
     <Compile Include="MantenimientoFactura.cs" />
     <Compile Include="MantenimientoProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MantenimientoClientes.cs" />
-    <Compile Include="RegexUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

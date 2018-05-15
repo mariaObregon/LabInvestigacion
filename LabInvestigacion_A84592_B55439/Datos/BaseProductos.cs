@@ -52,6 +52,29 @@ namespace Datos
             }
         }
 
+        public void ModificarCantidad(String strCodigo, String nuevaCantidad)
+        {
+            long newCode = long.Parse(strCodigo);
+            using (ModeloDB db = new ModeloDB())
+            {
+
+                var producto = from p in db.Producto
+                               where p.Codigo == newCode
+                               select p;
+
+                if (producto.Any<Producto>())
+                {
+                    var aux = producto.Single<Producto>();
+
+
+                    aux.CantidadInventario = aux.CantidadInventario - int.Parse(nuevaCantidad);
+
+
+                    db.SaveChanges();
+                }
+            }
+        }
+
         public void InsertarProducto(String strCodigo, String strDescripcion, String strPrecioVenta, String strCantInv)
         {
             using (ModeloDB db = new ModeloDB())
@@ -87,12 +110,12 @@ namespace Datos
                     //selecciona un unico producto
                     var productoAux = producto.Single<Producto>();
 
-
-                    foreach (LineaDetalle linea in productoAux.LineaDetalle)
+                    int tamaño = productoAux.LineaDetalle.Count();
+                    
+                    for (int i = tamaño - 1; i >= 0; i--)
                     {
-                        db.LineaDetalle.Remove(linea);
-                    }
-
+                        db.LineaDetalle.Remove(productoAux.LineaDetalle.ElementAt<LineaDetalle>(i)); 
+                    }   
                     db.Producto.Remove(productoAux);
                     db.SaveChanges();
                 }
