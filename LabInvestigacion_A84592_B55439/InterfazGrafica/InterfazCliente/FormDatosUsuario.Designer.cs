@@ -47,90 +47,90 @@
             // lbCedula
             // 
             this.lbCedula.AutoSize = true;
-            this.lbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCedula.Location = new System.Drawing.Point(30, 71);
             this.lbCedula.Name = "lbCedula";
-            this.lbCedula.Size = new System.Drawing.Size(62, 20);
+            this.lbCedula.Size = new System.Drawing.Size(50, 17);
             this.lbCedula.TabIndex = 0;
             this.lbCedula.Text = "Cedula";
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombre.Location = new System.Drawing.Point(30, 120);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(72, 20);
+            this.lbNombre.Size = new System.Drawing.Size(58, 17);
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Nombre";
             // 
             // lbApellido
             // 
             this.lbApellido.AutoSize = true;
-            this.lbApellido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbApellido.Location = new System.Drawing.Point(30, 173);
             this.lbApellido.Name = "lbApellido";
-            this.lbApellido.Size = new System.Drawing.Size(71, 20);
+            this.lbApellido.Size = new System.Drawing.Size(57, 17);
             this.lbApellido.TabIndex = 2;
             this.lbApellido.Text = "Apellido";
             // 
             // lbCorreo
             // 
             this.lbCorreo.AutoSize = true;
-            this.lbCorreo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCorreo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCorreo.Location = new System.Drawing.Point(30, 225);
             this.lbCorreo.Name = "lbCorreo";
-            this.lbCorreo.Size = new System.Drawing.Size(61, 20);
+            this.lbCorreo.Size = new System.Drawing.Size(50, 17);
             this.lbCorreo.TabIndex = 3;
             this.lbCorreo.Text = "Correo";
             // 
             // lbTelefono
             // 
             this.lbTelefono.AutoSize = true;
-            this.lbTelefono.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTelefono.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTelefono.Location = new System.Drawing.Point(30, 286);
             this.lbTelefono.Name = "lbTelefono";
-            this.lbTelefono.Size = new System.Drawing.Size(75, 20);
+            this.lbTelefono.Size = new System.Drawing.Size(60, 17);
             this.lbTelefono.TabIndex = 4;
             this.lbTelefono.Text = "Telefono";
             // 
             // tbCedula
             // 
-            this.tbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCedula.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCedula.Location = new System.Drawing.Point(134, 71);
             this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(100, 28);
+            this.tbCedula.Size = new System.Drawing.Size(202, 24);
             this.tbCedula.TabIndex = 5;
             // 
             // tbNombre
             // 
-            this.tbNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(134, 120);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(100, 28);
+            this.tbNombre.Size = new System.Drawing.Size(202, 24);
             this.tbNombre.TabIndex = 6;
             // 
             // tbApellido
             // 
-            this.tbApellido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbApellido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApellido.Location = new System.Drawing.Point(134, 173);
             this.tbApellido.Name = "tbApellido";
-            this.tbApellido.Size = new System.Drawing.Size(100, 28);
+            this.tbApellido.Size = new System.Drawing.Size(202, 24);
             this.tbApellido.TabIndex = 7;
             // 
             // tbCorreo
             // 
-            this.tbCorreo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCorreo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreo.Location = new System.Drawing.Point(134, 225);
             this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.Size = new System.Drawing.Size(100, 28);
+            this.tbCorreo.Size = new System.Drawing.Size(202, 24);
             this.tbCorreo.TabIndex = 8;
             // 
             // btnInsertar
             // 
             this.btnInsertar.BackColor = System.Drawing.Color.Silver;
-            this.btnInsertar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(371, 286);
+            this.btnInsertar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Location = new System.Drawing.Point(371, 312);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(106, 33);
             this.btnInsertar.TabIndex = 10;
@@ -142,7 +142,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Silver;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(371, 365);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 33);
@@ -154,7 +154,7 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Silver;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(230, 365);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(106, 33);
@@ -166,11 +166,11 @@
             // 
             // tbTelefono
             // 
-            this.tbTelefono.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTelefono.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefono.Location = new System.Drawing.Point(134, 286);
             this.tbTelefono.Mask = "0000-0000";
             this.tbTelefono.Name = "tbTelefono";
-            this.tbTelefono.Size = new System.Drawing.Size(100, 28);
+            this.tbTelefono.Size = new System.Drawing.Size(202, 24);
             this.tbTelefono.TabIndex = 13;
             // 
             // label1
@@ -203,6 +203,7 @@
             this.Controls.Add(this.lbApellido);
             this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbCedula);
+            this.MaximizeBox = false;
             this.Name = "FormDatosUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Datos del usuario";

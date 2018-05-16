@@ -39,7 +39,7 @@
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Silver;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(27, 257);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(156, 33);
@@ -51,7 +51,7 @@
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Silver;
-            this.btnMostrar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.Color.Black;
             this.btnMostrar.Location = new System.Drawing.Point(27, 165);
             this.btnMostrar.Name = "btnMostrar";
@@ -64,10 +64,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 20);
+            this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Cedula de cliente:";
             // 
@@ -92,11 +92,11 @@
             // lbTitulo
             // 
             this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.Navy;
             this.lbTitulo.Location = new System.Drawing.Point(343, 18);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(183, 26);
+            this.lbTitulo.Size = new System.Drawing.Size(178, 26);
             this.lbTitulo.TabIndex = 7;
             this.lbTitulo.Text = "Consultar cliente";
             // 
@@ -111,6 +111,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVolver);
+            this.MaximizeBox = false;
             this.Name = "FormConsultarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar cliente";

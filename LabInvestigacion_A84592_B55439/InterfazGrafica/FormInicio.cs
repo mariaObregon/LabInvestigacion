@@ -2,6 +2,8 @@
 using InterfazGrafica.InterfazFactura;
 using System;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Drawing;
 
 namespace InterfazGrafica
 {
@@ -11,6 +13,7 @@ namespace InterfazGrafica
         public FormInicio()
         {
             InitializeComponent();
+
           
         }
 
@@ -40,6 +43,22 @@ namespace InterfazGrafica
         {
             FormFacturacion frm = new FormFacturacion();
             frm.ShowDialog();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.LightSeaGreen,
+                                                                       Color.SandyBrown,
+                                                                       90F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void FormInicio_Resize(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

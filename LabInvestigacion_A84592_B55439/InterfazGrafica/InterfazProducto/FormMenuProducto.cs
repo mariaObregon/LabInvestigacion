@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace InterfazGrafica.InterfazProducto
@@ -40,6 +42,27 @@ namespace InterfazGrafica.InterfazProducto
             FormDatosProducto frm = new FormDatosProducto();
             frm.GetButtonModificar().Visible = true;
             frm.ShowDialog();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.White,
+                                                                       Color.Silver,
+                                                                       90F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMenuProducto_Resize(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

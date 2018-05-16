@@ -63,9 +63,59 @@ namespace InterfazGrafica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lupa {
+        internal static System.Drawing.Bitmap clienteImagen {
             get {
-                object obj = ResourceManager.GetObject("lupa", resourceCulture);
+                object obj = ResourceManager.GetObject("clienteImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estrella {
+            get {
+                object obj = ResourceManager.GetObject("estrella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facturaImagen {
+            get {
+                object obj = ResourceManager.GetObject("facturaImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facturaImagen1 {
+            get {
+                object obj = ResourceManager.GetObject("facturaImagen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap productoImagen {
+            get {
+                object obj = ResourceManager.GetObject("productoImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reporteImagen {
+            get {
+                object obj = ResourceManager.GetObject("reporteImagen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

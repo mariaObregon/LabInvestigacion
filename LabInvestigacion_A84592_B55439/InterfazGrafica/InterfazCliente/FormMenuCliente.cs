@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace InterfazGrafica
@@ -40,6 +42,22 @@ namespace InterfazGrafica
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                                                                       Color.White,
+                                                                       Color.Silver,
+                                                                       90F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void MenuCliente_Resize(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

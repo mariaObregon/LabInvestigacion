@@ -63,5 +63,6 @@ namespace InterfazGrafica.InterfazProducto
             return btnIngresar;
         }
 
+   
     }
 }
